@@ -26,6 +26,8 @@ if($db) {
 		$databaseConfig['password'] = SS_MSSQL_DATABASE_PASSWORD;
 	} else if($db == 'sqlite3') {
 		$databaseConfig['type'] = 'SQLite3Database';
+		// Include again to re-initialze the defaults
+		require(BASE_PATH . '/sqlite3/_config.php');
 	} else {
 		// stick with default settings set through ConfigureFromEnv
 	}
