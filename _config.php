@@ -28,6 +28,10 @@ if($db) {
 		$databaseConfig['type'] = 'SQLite3Database';
 		// Include again to re-initialze the defaults
 		require(BASE_PATH . '/sqlite3/_config.php');
+		// Emulate SapphireTest::create_tmp_db() on envs where mysite/_config.php isn't modified, e.g. build slaves.
+		if(!isset($databaseConfig['database']) || !$databaseConfig['database']) {
+			$databaseConfig['database'] = 'tmpdb' . rand(1000000,9999999);
+		}
 	} else {
 		// stick with default settings set through ConfigureFromEnv
 	}
