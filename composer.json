@@ -1,0 +1,14 @@
+{
+	"name": "silverstripe-labs/zframeworktest_dbswitcher",
+	"description": "Allows to specify the database through a query parameter,
+		which is useful when testing different databases on the same SilverStripe
+		instance, mainly for compatibility and regression checks.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe-labs", "zframeworktest_dbswitcher", "testing"],
+	"authors": [
+	{
+		"name": "Ingo Schommer",
+		"email": "ingo@silverstripe.com"
+	}
+	],
+}
